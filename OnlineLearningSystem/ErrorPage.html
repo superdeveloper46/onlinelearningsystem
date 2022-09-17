@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="Data,learning">
+
+    <!-- Title & favicon -->
+    <title>Let's Use Data</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="/Content/images/favicon.png" />
+
+    <!-- Styles -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/fontawesome-free-6.1.1-web/css/all.min.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+    <link href="Content/custome-style.css" rel="stylesheet" />
+    <link href="Content/new-theme-style.css" rel="stylesheet" />
+    <link href="Content/styles/general.css" rel="stylesheet" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196054626-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-196054626-1');
+    </script>
+</head>
+<body>
+    <div class="d-table">
+        <div class="d-cell">
+            <div class="text-center">
+                <img style="width: 445px; margin-bottom: 15px;" src="Content/images/custome-pencil.png" />
+            </div>
+            <form id="form1" runat="server">
+                <div class="margin-bottom-30">
+                    <h1>There was a problem processing your request</h1>
+                    <h2>We logged the problem and will investigate</h2>
+                </div>
+                <asp:LinkButton ID="LinkButton1" CssClass="btn btn-custom btn-sm" runat="server" OnClick="LinkButton1_Click" PostBackUrl="index.html">Go to Login Page</asp:LinkButton>
+            </form>
+        </div>
+    </div>
+
+    <!--=============================================================================-->
+</body>
+</html>

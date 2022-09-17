@@ -1,0 +1,57 @@
+﻿<div class="quiz-set">
+    <!-- Question header (title, points, feedback) -->
+    <div class="d-flex flex-column mb-3 flex-md-row justify-content-md-between">
+        <div class="d-flex flex-column flex-md-row">
+            <div class="d-flex flex-column align-items-center mb-0 flex-sm-row justify-content-sm-between align-items-sm-start mb-sm-2 align-items-md-center mb-md-0">
+                <div class="question-title mb-2 mb-sm-0" id="x_question-title"></div>
+                <div class="align-self-sm-start mb-2 d-flex flex-row align-items-baseline d-md-none">
+                    <span class="feedback-label">Feedback:</span>
+                    <div style="height: 100%; width: 0.604rem;"></div>
+                    <input type="image" class="thumbs-img-icon x_RateUp" src="../Content/images/thumb-up-normal.png" alt="Up">
+                    <div style="height: 100%; width: 0.708rem;"></div>
+                    <input type="image" class="thumbs-img-icon x_RateDown" src="../Content/images/thumb-down-normal.png" alt="Down">
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-center flex-sm-row justify-content-center">
+                <div class="question-points ml-0 mb-2 ml-md-3 mb-sm-0" id="x_question-points"></div>
+                <div class="reveal-answer ml-0 ml-sm-3" id="x_btnReveal" onclick="revealClick(x_); return false;"></div>
+            </div>
+            
+            <div class="adminctrl-container justify-content-center mt-2 mt-md-0 ml-md-3 align-items-md-center" editable-info='[{"id":"x_lblPrompt1","type":"simpleText","dataname":"Prompt1"},{"id":"x_textbox","type":"replaceBySimpleText","src":"x_Answer","class":"ml-1 editable-blue","dataname":"Answer"},{"id":"x_lblPrompt2","type":"simpleText","dataname":"Prompt2"},{"id":"x_question-points","type":"replaceContents","newBefore":"Max Points: ","newAfter":null}]' editable-api="Quiz.EditQuestion" editable-assocdata="QuestionId=%qid%">
+                <div class="editable-btn-edit" title="Edit"><i class="fa-solid fa-pen"></i></div>
+                <div class="editable-btn-delete" title="Delete"><i class="fa-solid fa-trash-can"></i></div>
+                <div class="editable-btn-save" title="Save"><i class="fa-solid fa-floppy-disk"></i></div>
+                <div class="editable-btn-cancel" title="Cancel"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+        </div>
+        <div class="align-self-sm-start mb-2 d-none d-md-flex flex-md-row align-items-md-baseline">
+            <span class="feedback-label">Feedback:</span>
+            <div style="height: 100%; width: 0.604rem;"></div>
+            <input type="image" class="thumbs-img-icon x_RateUp" src="../Content/images/thumb-up-normal.png" alt="Up">
+            <div style="height: 100%; width: 0.708rem;"></div>
+            <input type="image" class="thumbs-img-icon x_RateDown" src="../Content/images/thumb-down-normal.png" alt="Down">
+        </div>
+    </div>
+
+    <!-- Question contents -->
+    <div id="x_videoPanel" class="video-panel" style="display:none;">
+        <div id="playVideo" class="material-play-btn" onclick="play(x_)">
+            <a href="#">
+                <img src="Content/images/play-btn-x.png" />
+            </a>
+        </div>
+    </div>
+    <div class="question-img-area" id="x_questionImage"></div>
+    <div class="gradable-question-area">
+        <span id="x_lblPrompt1"></span>
+        <div id="x_elementArea" style="background-color:rgba(255, 0, 0, 0.25); border:2px solid red;display:none;position:absolute;" onclick="clickSubmit(x_)"></div>
+
+        <div id="x_textbox" class="gradeable-textbox-area">
+            <div type="text" id="x_txtAnswer" class="gradeable-textbox" onkeypress="rememberCharInput(x_, event);" onkeydown="rememberNavKey(x_, event);" oninput="checkAnswerOnInput(x_, this)" contentEditable="true"></div>
+            <select id="x_ddAnswer" style="display: none;" onchange="putChoice(x_);"></select>
+        </div>
+        <span id="x_lblPrompt2"></span>
+    </div>
+
+    <div class="gradable-checkbox-area" id="x_multipleChoice" style="display:none;"></div>
+</div>

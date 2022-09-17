@@ -1,0 +1,321 @@
+@import url("react-calendar/dist/Calendar.css");
+
+.calendar-container {
+  display: flex;
+
+  .calendar-content {
+    flex: 1 1 100%;
+    padding: 3rem 1rem 3rem 2rem;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .scheduler-wrapper {
+    margin-top: 48px;
+  }
+
+  .calendar-sidebar {
+    width: 420px;
+    padding: 3rem;
+
+    &-calendar {
+      margin-bottom: 2rem;
+      margin-top: 3rem;
+    }
+
+    h5 {
+      line-height: 1.5;
+      color: #404040;
+    }
+
+    .instructors-list {
+      .instructor-item {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 20px 0.75rem 0.75rem;
+        border: 1px solid #d9d9d9;
+        border-radius: 0.75rem;
+        margin-top: 16px;
+
+        .instructor-avatar {
+          display: flex;
+          align-items: flex-end;
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: contain;
+          }
+
+          .dot {
+            position: relative;
+            left: -0.75rem;
+            bottom: 2px;
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 0.75rem;
+            background-color: var(--bs-success);
+          }
+        }
+
+        .instructor-detail {
+          flex: 1;
+          .instructor-name {
+            font-weight: 600;
+            color: #353535;
+          }
+          .instructor-role {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: #606060;
+          }
+        }
+
+        .instructor-actions {
+          display: flex;
+          align-items: center;
+
+          .instructor-action {
+            background: #f2f2f2;
+            border-radius: 7px;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+            margin-left: 0.75rem;
+
+            svg {
+              color: #a0a0a0;
+              width: 15px;
+              height: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// .react-calendar__navigation__label__labelText {
+//   font-family: "Poppins";
+//   font-weight: 600;
+//   font-size: 1.5rem;
+//   width: 117px;
+//   height: 28px;
+// }
+
+// .react-calendar__navigation {
+//   margin-bottom: 0;
+// }
+// .react-calendar__month-view__weekdays__weekday {
+//   border: 0;
+// }
+// .react-calendar__navigation__label {
+//   flex-grow: 0 !important;
+// }
+// .react-calendar__navigation__arrow {
+//   display: none;
+// }
+// abbr[data-bs-original-title],
+// abbr[title] {
+//   text-decoration: none;
+// }
+
+// .react-calendar__tile--now {
+//   background: none;
+//   font-weight: "Poppins";
+//   font-weight: 600;
+//   padding: 19px;
+// }
+
+// .calender__main {
+//   padding-left: 20px;
+//   background-color: #f5f5f5;
+//   flex-grow: 1;
+//   padding: 47px 0 0 37px;
+//   width: 75%;
+//   height: 100vh;
+// }
+// .calender__header {
+//   display: flex;
+//   justify-content: space-between;
+// }
+// .calender__message-vector {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   border: 1px solid #a0a0a0;
+//   border-radius: 0.75rem;
+//   margin-left: 0.75rem;
+//   width: 54px;
+// }
+
+// .main__event-calender {
+//   margin-top: 45px;
+// }
+
+// .rightSideBar-calender {
+//   width: 85%;
+//   margin-top: 40px;
+//   display: flex;
+// }
+
+// .react-calendar__month-view {
+//   padding-right: 20px;
+// }
+// .calender-right {
+//   background-color: #f5f5f5;
+//   border: 0;
+// }
+// .calender_right-cell {
+//   background: unset;
+//   border: 0;
+//   padding: 10px;
+//   background-color: #f5f5f5;
+//   font-weight: 600;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+// .email {
+//   font-size: 11px;
+//   
+// }
+// .user--avatar {
+//   width: 55px;
+//   height: 55px;
+//   border-radius: 50%;
+//   margin-bottom: 3px;
+// }
+// .calender__right-user {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .icon__info {
+//   width: 16px;
+// }
+// .icon__div {
+//   display: flex;
+//   margin-right: 10px;
+//   gap: 10px;
+//   flex-wrap: wrap;
+//   justify-content: flex-end;
+// }
+// .intructor__pic {
+//   max-width: 50px;
+//   border-radius: 50%;
+// }
+// .instructor__heading {
+//   max-width: 192px;
+//   height: 36px;
+//   font-size: 1.5rem;
+//   line-height: 36px;
+//   color: #404040;
+//   padding-top: 5px;
+//   padding-left: 55px;
+// }
+// .appointment_tooltip {
+//   margin-left: 35px;
+//   margin-bottom: 35px;
+//   margin-right: 10px;
+// }
+// .appoitment__tooltip-field {
+//   display: flex;
+//   gap: 5px;
+//   font-size: 1rem;
+// }
+// .appoitment__tooltip-fieldValue {
+//   margin-top: -10px;
+//   margin-left: 20px;
+//   margin-bottom: 20px;
+//   font-size: 14px;
+// }
+// .assignment_pic {
+//   width: 16px;
+//   height: 18px;
+// }
+// .appoitment__tooltip-cell {
+//   width: 50%;
+// }
+// .leave__btn {
+//   width: 167px;
+//   padding: 20px;
+//   background-color: var(--bs-primary);
+// }
+// .appointment__container {
+//   // width: 'fit-content';
+//   display: grid;
+//   grid-template-rows: 10% 60% 10% 10%;
+//   gap: 10px;
+// }
+// .center {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+// .appointment__sample {
+//   padding: 10px 0px 10px 10px;
+// }
+// .timeScale {
+//   font-size: 16;
+//   width: 115;
+//   font-family: "Poppins";
+//   height: 84;
+//   display: "flex";
+//   // justifyContent: 'center';
+//   align-items: "center";
+//   border-bottom: "1px solid #D9D9D9";
+//   position: "relative";
+//   top: 42;
+//   right: -10;
+// }
+// .timeScaleLayout:last-child {
+//   display: none;
+//   color: red;
+// }
+// .timeScaleCell {
+//   font-size: 16;
+//   width: 116;
+//   font-family: "Poppins";
+//   height: 84;
+//   top: 0.5;
+//   display: "flex";
+//   font-weight: 600;
+//   align-items: "center";
+//   border-bottom: "1px solid #D9D9D9";
+//   position: "relative";
+//   right: -10;
+// }
+// .appointment__credit {
+//   padding-left: 10px;
+// }
+// .tooltip__header:first-child {
+//   margin-top: 35px;
+//   margin-right: 35px;
+// }
+// .day__scale_cell {
+//   display: "flex";
+//   flex-direction: "column";
+//   align-items: "center";
+// }
+// .table_scale {
+//   display: "flex";
+//   flex-direction: "column";
+//   align-items: "center";
+// }
+// .right-instructors {
+//   // min-width: 100%;
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   padding-top: 20px;
+// }

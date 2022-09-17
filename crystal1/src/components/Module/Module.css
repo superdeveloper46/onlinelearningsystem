@@ -1,0 +1,220 @@
+.module-item-title {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 29px;
+	color: #4a4a4a;
+	display: inline-block;
+}
+.module-objective .flex-box {
+	height: auto;
+	display: none;
+	text-align: left;
+	display: block;
+}
+
+.module-title-area {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 24px;
+	background: #ffffff;
+	border-radius: 20px;
+}
+.module-item-content {
+	padding: 8px 24px 24px;
+	margin: 8px 0;
+	background: #ffffff;
+	border-radius: 20px;
+}
+
+.module-item-content-area {
+	width: 384px;
+	float: left;
+	margin: 12px 12px;
+}
+
+.module-progress .progress-bar-percentage {
+	right: -65px;
+	position: absolute;
+	margin-top: -9px;
+	font-weight: 700;
+	color: #38a0f3;
+	font-size: 1.1rem;
+}
+
+.margin-l-r-1 {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+.margin-0 {
+	margin: 0 !important;
+}
+.module-progress .progress {
+	width: 100%;
+}
+@media (min-width: 992px) {
+	.module-progress .progress {
+		width: 80%;
+	}
+}
+
+.bg-light-blue {
+	background: #7fd4f7;
+}
+
+.custom-border {
+	border: 1px solid #dee2e6;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	display: inline-block;
+	width: 100%;
+}
+
+.custom-border-without-p {
+	border: 1px solid #dee2e6;
+	margin: 1rem 0;
+	display: inline-block;
+	width: 100%;
+}
+
+.custom-border-without-margin {
+	border: 1px solid #dee2e6;
+	margin: 0;
+	display: inline-block;
+	width: 100%;
+}
+
+.module-progress .due-date {
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.0625rem;
+	color: #f15656 !important;
+	margin-top: 0.75rem;
+}
+.module-progress .due-date i {
+	margin-right: 0.583rem;
+}
+
+.font-sans-serif {
+	font-family: sans-serif;
+}
+
+.module-progress .progress {
+	margin-top: 1.75rem;
+}
+.module-progress .progress.due {
+	margin-top: 1.25rem;
+}
+.module-progress-img-area {
+	display: inline-block;
+	margin-right: 16px;
+}
+
+.module-progress-img-area img {
+	width: 56px;
+	height: 56px;
+}
+
+.module-item-content {
+	padding: 8px 24px 24px;
+	margin: 8px 0;
+	background: #ffffff;
+	border-radius: 20px;
+}
+.modal-objective .m-card-btn:hover {
+	background: #fff;
+	width: 100%;
+	text-align: left;
+}
+
+.module-o-card a {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	color: #4a4a4a;
+	text-align: left;
+	padding: 0px;
+}
+
+.module-objective .module-o-card {
+	height: auto;
+	width: 100%;
+	text-align: left;
+	margin-top: 16px;
+	padding: 16px 8px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(222, 224, 224);
+	border-image: initial;
+	border-radius: 8px;
+}
+
+.prg-title {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	color: #4a4a4a;
+}
+
+.padding-0 {
+	padding: 0 !important;
+}
+
+.prg-val {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	color: #0092ce;
+	display: inline-block !important;
+	text-align: right;
+	float: right;
+	margin-top: 6px;
+}
+
+.modal-objective .module-o-card .progress {
+	height: 4px;
+}
+
+.progress {
+	display: flex;
+	height: 0.5rem;
+	overflow: inherit;
+	font-size: 0.75rem;
+	background-color: #d6d6d6;
+	border-radius: 5rem;
+	position: relative;
+}
+
+/* Due Date Error Message*/
+
+.module-due-time-date-area {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	color: #78868c;
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.due-time-area {
+	margin-top: 4px;
+}
+
+.due-time-clock-icon {
+	display: inline-block;
+}
+.due-time-clock-icon img {
+	width: 13.33px;
+	height: 13.33px;
+}

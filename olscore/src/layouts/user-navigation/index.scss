@@ -1,0 +1,50 @@
+.user-navigation {
+  display: flex;
+  align-items: center;
+
+  .divider {
+    margin: 0 16px;
+    border-left: 2px solid #d9d9d9;
+    height: 52px;
+  }
+}
+
+.user-avatar {
+  padding-right: 0.75rem;
+  img {
+    height: 52px;
+    width: 52px;
+    border-radius: 50%;
+  }
+}
+
+.user-info {
+  margin-right: 16px;
+  .user-name {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.178106px;
+    color: #353535;
+  }
+
+  .user-email {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 16px;
+    letter-spacing: 0.178106px;
+    color: #606060;
+  }
+}
+
+.user-navigation.user-nav-dark-mode {
+  .user-name {
+    color: #d9d9d9;
+  }
+
+  .user-email {
+    color: #BFBFBF;
+  }
+}

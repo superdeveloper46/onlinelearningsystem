@@ -1,0 +1,47 @@
+.btn-like {
+  display: flex;
+  align-items: center;
+
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 22px;
+  color: #808080;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 7px 10px;
+
+  svg {
+    margin-right: 0.5rem;
+  }
+
+  &.liked {
+    font-weight: 600;
+    color: #404040;
+
+    svg {
+      color: #404040;
+    }
+  }
+}
+
+.btn-nav-back {
+  display: flex;
+  align-items: center;
+
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--bs-primary);
+  border: 1px solid var(--bs-primary);
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 7px 10px;
+
+  svg {
+    margin-right: 0.5rem;
+    color: var(--bs-primary);
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}

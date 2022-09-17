@@ -1,0 +1,121 @@
+﻿/*
+New style for Let's Use Data
+Page: Quiz Page
+*/
+
+
+/* Box (quiz header) */
+.box.quiz-header {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.box.quiz-header .quiz-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.box.quiz-header .quiz-grade {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media (min-width: 768px) { /* bootstrap's (-md-) breakpoint */
+    .box.quiz-header .quiz-grade { width: 9.45rem; }
+}
+
+#quiz-grade {
+    color: var(--palette-blue-normal);
+}
+#quiz-grade.full {
+    color: var(--palette-green-full);
+}
+
+/* Box (quiz contents) */
+.box.quiz-contents {
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.box.quiz-contents .question-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 100%;
+    color: var(--palette-gray-dark);
+}
+
+.box.quiz-contents .feedback-label {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 150%;
+    color: #78868C;
+    position: relative;
+    top: -0.13rem
+}
+
+.box.quiz-contents .question-points {
+    background-color: #DAF4FF;
+    color: #0092CE;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 0.9375rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1.5rem;
+    cursor: default;
+}
+
+.box.quiz-contents .reveal-answer {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 0.9375rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.box.quiz-contents .reveal-answer.revealed {
+    color: #ECAD0F;
+    border: 1px solid #ECAD0F;
+    cursor: default;
+    pointer-events: none;
+}
+.box.quiz-contents .reveal-answer.correct {
+    color: #7DC237;
+    border: 1px solid #7DC237;
+    cursor: default;
+    pointer-events: none;
+}
+.box.quiz-contents .reveal-answer.reveal {
+    color: #F15656;
+    border: 1px solid #F15656;
+    cursor: pointer;
+}
+.box.quiz-contents .reveal-answer.reveal:hover {
+    background-color: #f5e0e0;
+}
+
+
+/* ProgressBar */
+.box.quiz-header .progress {
+    height: 0.313rem;
+    margin-top: 0.25rem;
+    background-color: #DEE0E0;
+}
+.box.quiz-header div.progress-bar {
+    background: var(--palette-blue-normal);
+}
+.box.quiz-header div.progress-bar.full {
+    background: var(--palette-green-full);
+}
+
+/* Editables */
+.editable-blue {
+   color: var(--palette-blue-normal);
+}

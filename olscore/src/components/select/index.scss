@@ -1,0 +1,33 @@
+.cm-select {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  -moz-padding-start: calc(1.5rem - 3px);
+  font-size: 1rem;
+  
+  line-height: 1.4;
+  color: #353535;
+  background-color: #fff;
+  background-image: url("./chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 1.5rem center;
+  background-size: 1rem 0.75rem;
+
+  border: 1px solid #bdbdbd;
+  border-radius: 0.75rem;
+
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &:focus-visible {
+    outline-color: #a7a7a7;
+  }
+
+  option {
+    padding: 0.5rem;
+    &:disabled {
+      color: #a0a0a0;
+    }
+  }
+}

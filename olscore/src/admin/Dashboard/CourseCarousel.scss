@@ -1,0 +1,165 @@
+.course-carousel {
+  min-height: 390px;
+  position: relative;
+  margin-left: -8px;
+  margin-bottom: 16px;
+  width: calc(100% - 240px);
+
+  .course-card {
+    width: 260px;
+    height: 360px;
+    border: 1px solid #bfbfbf;
+    border-radius: 12px;
+    background: #fdfdfd;
+    margin: 0 0.5rem;
+    transition: all 0.2s;
+
+    &:hover,
+    &.active {
+      border: 1px solid var(--bs-primary);
+      background-color: rgba(204, 233, 245, 0.15);
+
+      .video-container {
+        background-color: rgba(204, 233, 245, 0.15);
+      }
+
+      .card-footer-part {
+        background-color: rgba(204, 233, 245, 0.15);
+      }
+    }
+
+    .course-stat-title {
+      font-weight: 500;
+      font-size: 0.875rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #808080;
+    }
+
+    .course-stat-content {
+      font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #404040;
+    }
+
+    .video-container {
+      transition: all 0.2s;
+      padding: 1.1rem;
+
+      h3.course-title {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 600;
+        color: #404040;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 1rem;
+      }
+
+      .video-part {
+        height: 120px;
+        overflow: hidden;
+        border-radius: 9.6px;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+        margin-bottom: 14px;
+        margin-top: 6px;
+      }
+      .grade-title {
+        font-weight: 600;
+        font-size: 0.8rem;
+        color: #404040;
+        line-height: 18px;
+      }
+    }
+
+    .card-footer-part {
+      padding-top: 1rem;
+
+      .custom-progress-bar {
+        .progress {
+          height: 4px;
+          margin: 0px 10px 0 0;
+          .progress-bar {
+            background-color: var(--bs-primary);
+          }
+        }
+      }
+      label {
+        margin-bottom: 0px;
+        font-weight: 600;
+        font-size: 0.75rem;
+        letter-spacing: 0.1.5rem;
+        color: #353535;
+      }
+    }
+
+    .message {
+      display: flex;
+      align-items: center;
+      margin: 0.75rem 1.25rem 1rem;
+      padding: 1rem;
+      font-weight: 500;
+      font-size: 0.8rem;
+      line-height: 1.2;
+      border-radius: 8px;
+      svg {
+        margin-right: 8px;
+      }
+      &.message-warning {
+        background: rgba(226, 185, 59, 0.08);
+        color: #e2b93b;
+      }
+
+      &.message-success {
+        background: rgba(39, 174, 96, 0.08);
+        color: #27ae60;
+      }
+    }
+  }
+  .btn-card-nav {
+    svg {
+      color: #2ba4d6;
+    }
+    border: 2px solid #2ba4d6;
+    border-radius: 0.75rem;
+    height: 5rem;
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    box-shadow: none;
+    color: #2ba4d6;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+
+    background-color: rgba(0, 146, 206, 0.15);
+  }
+
+  .btn-card-prev {
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    z-index: 51;
+    backdrop-filter: blur(10px);
+    svg {
+      color: #2ba4d6;
+    }
+  }
+  .btn-card-next {
+    position: absolute;
+    right: calc(8px);
+    top: 50%;
+    transform: translate(0px, -50%);
+    z-index: 51;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s;
+  }
+}

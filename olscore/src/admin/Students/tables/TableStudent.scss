@@ -1,0 +1,33 @@
+.table-students {
+  thead {
+    border-radius: 8px;
+    th {
+      background: rgba(242, 242, 242, 0.5);
+      font-size: 0.875rem;
+      line-height: 1.5;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #a0a0a0;
+      text-align: center;
+      font-weight: 500;
+      border: 0;
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        text-align: center;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #404040;
+        padding: 1rem;
+
+        &:first-child {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

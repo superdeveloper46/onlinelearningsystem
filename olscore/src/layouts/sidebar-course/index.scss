@@ -1,0 +1,111 @@
+.sidebar-course {
+  width: 441px;
+  position: relative;
+  border-radius: 0px;
+  background: #feffff;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-bottom: 48px;
+
+  nav[aria-label="breadcrumb"] {
+    margin-right: -48px;
+    margin-left: 0px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .course-name {
+    margin-right: -36px;
+    h2 {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 28px;
+      color: #353535;
+    }
+    span {
+      font-size: 14px;
+      font-weight: 600;
+      color: #808080;
+    }
+  }
+
+  .course-info-label {
+    margin-top: 28px;
+    margin-bottom: 0.75rem;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    color: #a0a0a0;
+    text-transform: uppercase;
+  }
+}
+
+.student-outcomes-list {
+  text-decoration: none;
+  padding: 0;
+  .student-outcomes-item {
+    padding-left: 8px;
+    margin-bottom: 0.75rem;
+    span.icon {
+      margin-right: 0.75rem;
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+    padding: 0;
+    list-style: none;
+    .detail {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.5rem;
+      color: #404040;
+    }
+  }
+}
+
+.task-item {
+  border-radius: 15.4478px;
+  padding: 1.5rem;
+  border: 1.28731px solid #d9d9d9;
+
+  h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #404040;
+    margin: 0;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #808080;
+    margin: 0;
+  }
+
+  h5 {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.643657px;
+    color: #a0a0a0;
+    margin: 0;
+  }
+
+  .date {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #eb5757;
+    margin-left: 0.5rem;
+  }
+
+  svg {
+    color: #606060;
+  }
+}

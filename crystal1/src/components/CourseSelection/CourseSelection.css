@@ -1,0 +1,115 @@
+/*
+New style for Let's Use Data
+June 29, 2022
+*/
+
+/*
+Page: Course Selection
+*/
+.boxcontainer.selcourse {
+	padding: 2rem 1.5rem;
+}
+.boxcontainer.impersonate {
+	padding: 2rem 1.5rem 0 1.5rem;
+}
+
+.box.selcourse {
+	padding: 1.5rem;
+	transition: all ease 250ms;
+	background-color: #fff;
+	border-radius: 1.25rem;
+}
+.box.selcourse:hover {
+	box-shadow: 0px 15px 50px rgba(2, 89, 124, 0.2);
+}
+.box.impersonate {
+	padding: 1.5rem;
+	transition: all ease 250ms;
+	display: flex;
+	flex-direction: column;
+}
+.box.impersonate:hover {
+	box-shadow: 0px 15px 50px rgba(2, 89, 124, 0.2);
+}
+
+.course-quarter {
+	font-size: 1rem;
+	font-weight: 600;
+	color: #78868c;
+}
+
+h1.course-name {
+	font-size: 2rem;
+	font-weight: 600;
+	color: #0092ce;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.progresssection.selcourse {
+	margin-top: 2.5rem;
+	margin-bottom: 4.5rem;
+}
+
+.progressbody.selcourse {
+	height: 0.25rem;
+	background-color: #dee0e0;
+	border-radius: 0.25rem;
+}
+
+.progressfillsolid.selcourse {
+	background: none;
+	background-color: #0092ce;
+	border-radius: 0.25rem;
+	height: 0.25rem;
+}
+
+.progressanistripe.selcourse {
+	border-radius: 0.25rem;
+	height: 0.25rem;
+}
+
+.gradecompleted div {
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1.25rem;
+	color: #4a4a4a;
+}
+
+.gradecompleted div span {
+	color: #0092ce;
+}
+.gradecompleted div span.full {
+	color: #7dc237;
+}
+
+.button.selcourse {
+	width: 7.75rem;
+}
+.button.solid.full {
+	background-color: #7dc237;
+}
+.button.solid.full:focus {
+	background-color: #7dc237;
+	box-shadow: 0 0.25rem 0.625rem rgba(125, 194, 55, 0.3),
+		0 0.5rem 0.625rem rgba(125, 194, 55, 0.3);
+}
+
+.button.solid:hover {
+	background-color: #1baeeb;
+}
+.spinner {
+	animation: spin infinite 5s linear;
+
+	/*You can increase or decrease the timer (5s) to 
+     increase or decrease the speed of the spinner*/
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

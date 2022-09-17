@@ -1,0 +1,57 @@
+.step-video-container {
+  margin-bottom: 16px;
+  width: 100%;
+  padding-top: 35%;
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+
+  .step-video-overlay {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    z-index: 998;
+    opacity: 0.8;
+  }
+
+  img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .btn-play-video {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    z-index: 999;
+    border-radius: 50%;
+    background: #afafaf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+.step-detail {
+  .tab-content {
+    min-height: 240px;
+  }
+  p {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 26px;
+    letter-spacing: 0.178106px;
+    color: #606060;
+  }
+}
+
+.step-video-actions {
+  margin-bottom: 8px;
+}

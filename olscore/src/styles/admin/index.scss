@@ -1,0 +1,15 @@
+header.admin-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .header__left {
+    h1 {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      font-weight: 600;
+      color: #353535;
+      margin-bottom: 10px;
+    }
+  }
+}

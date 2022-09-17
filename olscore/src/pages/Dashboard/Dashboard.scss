@@ -1,0 +1,61 @@
+.dashboard-container {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+
+  .dashboard-content-wrapper {
+    background-color: #fbfbfb;
+    padding: 24px 2rem;
+    width: calc(100% - 4rem - 24px);
+    min-height: 1024px;
+    transition: all 0.5s;
+
+    &.opened {
+      width: calc(100% - var(--profile-width));
+    }
+
+    header.dashboard-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .header__left {
+        h1 {
+          font-size: 1.25rem;
+          line-height: 1.5rem;
+          font-weight: 600;
+          color: #353535;
+          margin-bottom: 10px;
+        }
+        .header-info {
+          .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #d1d1d1;
+            margin: 0px 6px;
+          }
+          span {
+            color: #606060;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.25rem;
+          }
+        }
+      }
+    }
+
+    .dashboard-content {
+      margin: 1.5rem 0px 1rem;
+      .dashboard-content__header {
+        margin-bottom: 1.25rem;
+      }
+      h2 {
+        color: #000000;
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 2rem;
+      }
+    }
+  }
+}

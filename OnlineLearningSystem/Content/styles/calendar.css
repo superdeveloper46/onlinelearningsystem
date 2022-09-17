@@ -1,0 +1,172 @@
+﻿/*
+New style for Let's Use Data
+Page: Calendar
+*/
+
+
+/* Box (calendar header) */
+.box.calendar-header {
+	border-radius: 3.375rem;
+	margin-top: 4.3125rem;
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+	width: 100%;
+}
+
+/* 'Today' button */
+.box.calendar-header button.button#today {
+	width: 6.0625rem;
+}
+
+/* 'Hide completed tasks' checkbox */
+.box.calendar-header .hide-completed-tasks label {
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1.0625rem;
+	color: #4A4A4A;
+	margin-left: 0.5rem;
+}
+.box.calendar-header .hide-completed-tasks input[type=checkbox] {
+	width: 1rem;
+	height: 1rem;
+}
+
+/* Calendar control buttons (previous & next date) */
+div.calctl-btn {
+	outline: none;
+	cursor: pointer;
+	border: 2px solid #4A4A4A;
+	width: 2.75rem;
+	height: 2.75rem;
+	border-radius: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	color: #4A4A4A;
+	transition: all ease 333ms;
+	font-size: 1.3rem;
+}
+div.calctl-btn:hover {
+	background-color: #e3e3e3;
+}
+
+div#calctl-curmonthyear-label {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	color: #4A4A4A;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1.8125rem;
+	margin: 0 1.5rem;
+	cursor: default;
+	width: 7.1rem; /* The maximum width needed - this is to prevent moving of buttons (artifact) when the month name is short */
+}
+
+/* Calendar table contents */
+#calendar .cell {
+	width: 9.375rem;
+	height: 9.375rem;
+}
+
+#calendar div.day-of-week {
+	font-weight: 600;
+	font-size: 0.875rem;
+	line-height: 1.0625rem;
+	text-align: center;
+	color: #4A4A4A;
+	margin-top: calc(0.5rem - 0.3rem); /* In style.css:232, (.table td) has a padding of 0.3rem. We need a total of 0.5rem */
+}
+
+#calendar div.day-number {
+	font-weight: 600;
+	font-size: 0.75rem;
+	line-height: 0.9375rem;
+	text-align: center;
+	color: #4A4A4A;
+	margin-top: 0.25rem;
+}
+
+#calendar div.day-of-week.today, #calendar div.day-number.today {
+	color: var(--palette-blue-normal);
+}
+
+#calendar .tasks-container {
+	margin-top: 1rem;
+	height: calc(9.375rem - (1.0625rem + 0.2rem + 0.9375rem + 0.25rem + 1rem));
+	overflow: auto;
+}
+
+#calendar .cell .task {
+	font-size: 0.75rem;
+	font-weight: 400;
+	line-height: 150%;
+	cursor: pointer;
+	padding-left: 0.369375rem;
+	margin-bottom: 0.625rem;
+}
+#calendar .cell .task:last-child {
+	margin-bottom: 0;
+}
+#calendar .cell .task span {
+	color: #4A4A4A;
+}
+#calendar .cell .task.completed span {
+	text-decoration: line-through;
+}
+#calendar .cell .task i {
+	font-size: 0.5rem;
+	color: #0092CE;
+	position: relative;
+	top: -0.1rem;
+}
+#calendar .cell .task.completed i {
+	color: #7DC237;
+}
+
+
+/* Task Popups */
+.taskpopup {
+	background: #333;
+	color: white;
+	padding: 4px 8px;
+	font-size: 13px;
+	border-radius: 4px;
+	position: absolute;
+	display: none;
+}
+.taskpopup[data-show] {
+	display: block;
+}
+.taskpopup a {
+	color: var(--palette-blue-normal);
+}
+.taskpopup a:hover {
+	color: #52ceff;
+}
+
+.popup_arrow,
+.popup_arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+}
+
+.popup_arrow {
+  visibility: hidden;
+}
+
+.popup_arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+.taskpopup[data-popper-placement^='top'] > .popup_arrow { bottom: -4px; }
+.taskpopup[data-popper-placement^='bottom'] > .popup_arrow { top: -4px; }
+.taskpopup[data-popper-placement^='left'] > .popup_arrow { right: -4px; }
+.taskpopup[data-popper-placement^='right'] > .popup_arrow { left: -4px; }
+

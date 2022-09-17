@@ -1,0 +1,56 @@
+.category-subject {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  color: #404040;
+  margin-bottom: 1.5rem;
+
+  svg {
+    margin-right: 0.5rem;
+  }
+}
+
+.category-box {
+  border: 1px solid #bfbfbf;
+  border-radius: 0.75rem;
+  padding: 18px;
+  margin-bottom: 1.5rem;
+
+  h4 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #404040;
+  }
+
+  h5 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #606060;
+  }
+
+  .material-item {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #404040;
+    display: block;
+    margin: 8px;
+    img {
+      width: 16px;
+      height: 16px;
+      margin-right: 0.5em;
+    }
+  }
+
+  .quiz-progress-status {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 22px;
+    color: #a0a0a0;
+    margin-bottom: 16px;
+  }
+}

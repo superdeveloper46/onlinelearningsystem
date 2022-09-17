@@ -1,0 +1,33 @@
+$theme-color-primary: #0092ce;
+$theme-color-success: #27ae60;
+
+$theme-colors: (
+  "primary": $theme-color-primary,
+  "info": #2f80ed,
+  "success": $theme-color-success,
+  "warning": #e2b93b,
+  "error": #eb5757,
+);
+
+$enable-shadows: false;
+$font-family-sans-serif: "Poppins", sans-serif;
+$font-family-monospace: "Poppins", sans-serif;
+
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1rem;
+
+$modal-header-border-width: 0px;
+$modal-footer-border-width: 0px;
+$modal-inner-padding: 1rem;
+
+:root {
+  --sidebar-width: 224px;
+  --profile-width: 355px;
+}
+
+@media only screen and (min-width: 1440px) {
+  :root {
+    --sidebar-width: 242px;
+    --profile-width: 472px;
+  }
+}

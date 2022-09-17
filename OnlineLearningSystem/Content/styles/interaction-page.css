@@ -1,0 +1,363 @@
+﻿/*
+New style for Let's Use Data
+Page: Interaction (Assignments)
+*/
+
+
+/* Old styles specific to this page (from older code) */
+ul#theHints {
+    font-size: 15px;
+    list-style: square;
+}
+
+.problem-header-area {
+    display: inline-block;
+    padding: 0 2rem;
+    width: 90%;
+    transform: translateY(-50%);
+    top: 50%;
+    position: relative;
+}
+
+.language-header-area {
+    float: left;
+    display: block;
+    width: 10%;
+    padding: 0 10px;
+    transform: translateY(-50%);
+    top: 50%;
+    position: relative;
+}
+
+.list-group-item {
+    display: list-item;
+    padding: 0.5rem 0;
+    margin-left: 60px;
+}
+
+
+/* Box (assignment header) */
+.box.assignment-header {
+    padding: 1.53rem 2rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.box.assignment-header .assignment-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+
+.assignment-due {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 150%;
+    color: #78868C;
+    display: none; /* INITIALLY - see PageScripts\Interaction.js */
+    flex-direction: column;
+}
+@media (min-width: 992px) { /* bootstrap's (-lg-) breakpoint */
+    .assignment-due { margin-right: 2rem; }
+}
+.assignment-due div {
+    margin: 0.16656rem 0;
+}
+
+
+.vert-sep {
+    height: 3.375rem;
+    border-left: 1px solid #E7E7E7;
+    opacity: 0; /* INITIALLY - see PageScripts\Interaction.js */
+}
+
+
+.assignment-bestgrade-title {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 150%;
+    width: 5.1rem;
+    margin-right: 1.125rem;
+    text-align: right;
+}
+@media (min-width: 992px) {
+    .assignment-bestgrade-title { margin-left: 2.1rem; }
+}
+
+:root {
+  --circularprogress-diameter: 3.6rem;
+  --circularprogress-border-width: 2px;
+  --circularprogress-defaultcolor: gainsboro;
+}
+
+.circle-container {
+  width: var(--circularprogress-diameter);
+  height: var(--circularprogress-diameter);
+  transform: rotate(-90deg);
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+}
+
+.circle-container__background {
+  fill: none;
+  stroke: var(--circularprogress-defaultcolor);
+  stroke-width: var(--circularprogress-border-width);
+  stroke-linecap: round;
+}
+
+.circle-container__progress {
+  fill: none;
+  stroke-linecap: round;
+  stroke: var(--palette-blue-normal);
+  stroke-dasharray: 100 100;
+  stroke-linecap: round;
+  stroke-width: var(--circularprogress-border-width);
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.circular-progress {
+    position: relative;
+}
+.circular-progress div#circular-progress-value {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: calc(52% - 0.75rem) 0 calc(48% - 0.75rem) 0;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 150%;
+    color: var(--palette-blue-normal);
+}
+
+
+/* Box (assignment contents) */
+.box.assignment-contents {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.box.assignment-contents.rcol-code {
+    padding: 1.5rem 1.5rem 1.2rem 1.5rem; /* This box (right side) needs this! */
+}
+
+.coding-area {
+    height: 25rem;
+    border: 1px solid #D9D9D9;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.codecmd-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+@media (min-width: 576px) { /* bootstrap's (-sm-) breakpoint */
+    .codecmd-container {
+        flex-grow: 1;
+        width: unset;
+        justify-content: flex-end;
+        margin-top: 0;
+    }
+}
+
+.button.codecmd {
+    min-width: 3rem;
+    max-width: 10rem;
+    width: 7rem;
+}
+@media (min-width: 576px) { /* bootstrap's (-sm-) breakpoint */
+    .button.codecmd { width: 35%; }
+}
+@media (min-width: 992px) { /* bootstrap's (-lg-) breakpoint */
+    .button.codecmd { width: 40%; }
+}
+
+.assessment-submissions {
+    min-width: 11.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.assessment-submissions span {
+    color: var(--palette-blue-normal);
+}
+.assessment-submissions span.full {
+    color: var(--palette-green-full);
+}
+
+.assessment-submissions .progress {
+    height: 0.313rem;
+    margin-top: 0.25rem;
+    background-color: #DEE0E0;
+}
+.assessment-submissions div.progress-bar {
+    background: var(--palette-blue-normal);
+}
+.assessment-submissions div.progress-bar.full {
+    background: var(--palette-green-full);
+}
+
+.submission-date {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.06rem;
+    margin-top: 0.4rem;
+    display: none; /* INITIALLY - see PageScripts\Interaction.js */
+}
+.submission-date.ontime {
+    color: #5A8929;
+}
+.submission-date.postdue {
+    color: #F15656
+}
+
+
+/* Tab styles */
+button.nav-link {
+    outline: none;
+    font-size: 1.25rem;
+    font-weight: 400;
+    border-top-color: #ced4da!important;
+    border-left-color: #ced4da!important;
+    border-right-color: #ced4da!important;
+    font-weight: 600;
+}
+
+.tab-content {
+    border-left: 1px solid #ced4da;
+    border-right: 1px solid #ced4da;
+    border-bottom: 1px solid #ced4da;
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    height: 25rem; /* Only because 'height' MUST be set */
+    flex-grow: 1;
+}
+
+.tab-pane {
+    height: 100%;
+    padding: 1.5rem;
+}
+
+.nav.nav-tabs {
+    margin-right: 0.43rem;
+}
+
+.vscrollable {
+    overflow: auto;
+    height: 100%;
+    padding-right: 1rem;
+}
+.vscrollable.editable-container {
+    padding-right: 0;
+}
+
+.tab-pane a.italic-anchor {
+    font-size: 0.9rem;
+}
+
+#txtInstructions {
+    font-family: 'Montserrat', sans-serif; /* Needed because the rich editor changes font-family */
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+#txtInstructions ul {
+    list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAC9SURBVChTY/gPBe9//PnfcOLZf4e1t/4zTDoHxgbLrv9fcO0NVAUEgDXc//jzv8L8K3CF6FhhwZX/9z/9RGiAKQZJ7H/yGWwbCKy/+wFFDiTOMB9oJbIAOgCJwTSBnMwAcieIAzINFwDZClID9h+IAcL4ANgpUHVwDdicgwzgGmDBCLIWF9hw9z1YDdj5YI8AOcR4ev61t/8ZkAVAmmCeB4mDbEWWAwHyIg4GQFbCghmEQf6rP/kcyan//wMAbA3Xvi4DdSAAAAAASUVORK5CYII=');
+}
+
+.vscrollable.editable-container.beingedited {
+    overflow: unset;
+}
+.vscrollable.editable-container.beingedited #txtInstructions {
+    height: 81%;
+}
+
+.summary-code, .summary-execution {
+    min-width: 7.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media (min-width: 576px) { /* bootstrap's (-sm-) breakpoint */
+    .summary-code, .summary-execution {
+        min-width: 10rem;
+        font-size: 1rem;
+    }
+}
+.summary-code #summary-code, .summary-execution #summary-execution {
+    color: var(--palette-blue-normal);
+}
+.summary-code #summary-code.full, .summary-execution #summary-execution.full {
+    color: var(--palette-green-full);
+}
+
+.summary-code .progress, .summary-execution .progress {
+    height: 0.313rem;
+    margin-top: 0.25rem;
+    background-color: #DEE0E0;
+}
+.summary-code div.progress-bar, .summary-execution div.progress-bar {
+    background: var(--palette-blue-normal);
+}
+.summary-code div.progress-bar.full, .summary-execution div.progress-bar.full {
+    background: var(--palette-green-full);
+}
+
+.nocontent {
+    padding-left: 1px;
+}
+
+.nocontent i {
+    color: var(--palette-blue-normal);
+}
+
+#summary-exists, #feedback-exists {
+    display: none;
+}
+
+#summary-output h4 {
+    margin-top: 2.1rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+#summary-output .output, #feedback-output .output {
+    border: 1px solid #D9D9D9;
+    font-family: Consolas, monospace;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    min-height: calc(2px + 1.5rem);
+    word-break: break-word;
+}
+
+.output.success {
+    color: #5A8929;
+    background-color: #EEFAFD;
+}
+
+.output.failure {
+    color: #F15656;
+    background-color: #FFF0F0;
+}
+
+input[type=datetime-local].beingedited {
+    position: relative;
+    top: 0.1rem;
+    width: 13.7rem;
+    height: 1.8333rem;
+}

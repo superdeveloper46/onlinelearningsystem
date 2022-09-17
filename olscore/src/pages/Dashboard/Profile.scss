@@ -1,0 +1,241 @@
+.dashboard-container {
+  .profile-container {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    bottom: 0;
+    right: calc(0px - var(--profile-width) + 4rem + 24px);
+    width: var(--profile-width);
+    background-color: #fefefe;
+    padding: 32px 1.75rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.5s;
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+
+      .step-nav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 2rem;
+        height: 36px;
+        width: 36px;
+        border: 1.5px solid #d9d9d9;
+        border-radius: 50%;
+        background: #f2f2f2;
+
+        i {
+          color: #808080;
+        }
+
+        &:hover {
+          cursor: pointer;
+          color: #606060;
+          background: rgba(209, 209, 209, 0.5);
+          border: 1.5px solid #d9d9d9;
+        }
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        line-height: 2rem;
+        color: #000000;
+        flex: 1;
+      }
+    }
+
+    &.opened {
+      right: 0;
+      .step-nav-toggle {
+        margin-right: 1rem !important;
+      }
+    }
+
+    .profile-content {
+      margin-bottom: 40px;
+      .profile-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 50px auto 28px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .profile-info {
+        h2.fullname {
+          font-size: 1.25rem;
+          letter-spacing: 0.319px;
+          color: #353535;
+          line-height: 1.2;
+          text-align: center;
+          font-weight: 500;
+        }
+        span.email {
+          display: block;
+          text-align: center;
+          font-size: 1.125rem;
+          line-height: 26px;
+          letter-spacing: 0.24px;
+          color: #606060;
+          margin-bottom: 2px;
+        }
+      }
+    }
+
+    .img-wrapper {
+      border-radius: 0.75rem;
+      width: 3.75rem;
+      height: 3.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        margin-left: 3px;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      svg {
+        margin-left: 3px;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+
+    .profile-school {
+      display: flex;
+      align-items: center;
+
+      .img-wrapper {
+        background-color: rgba(253, 181, 27, 0.15);
+      }
+    }
+
+    .profile-courses {
+      display: flex;
+      align-items: center;
+
+      .img-wrapper {
+        background-color: rgba(236, 224, 241, 0.8);
+      }
+    }
+
+    .profile-list-info {
+      margin-left: 0.75rem;
+      h4 {
+        color: #808080;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height: 1.5rem;
+        margin-bottom: 2px;
+      }
+      span {
+        color: #353535;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.2;
+      }
+    }
+
+    .upcoming-container {
+      margin-top: 4rem;
+      padding: 0px 6px;
+      .upcoming-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        label {
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: 600;
+          letter-spacing: 0.376px;
+          color: #404040;
+          margin-bottom: 0px;
+        }
+      }
+      hr {
+        border-top: 2px solid #d9d9d9;
+        margin-top: 0.25rem;
+        margin-bottom: 0.875rem;
+      }
+      .upcoming-card-body {
+        background-color: #fefefe;
+        border: 1px solid #d9d9d9;
+        border-radius: 1rem;
+        padding: 1rem 1.25rem;
+      }
+
+      .upcoming-list-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 1.5rem;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+
+        .first-container {
+          min-width: 7rem;
+          label {
+            color: #808080;
+            font-size: 0.875rem;
+            display: block;
+            margin-bottom: 1px;
+            font-weight: 600;
+          }
+        }
+
+        span {
+          color: #404040;
+          font-size: 1rem;
+          font-weight: 600;
+        }
+        .middle-container {
+          margin: 0px 10px;
+          width: 0.5rem;
+          .border-first {
+            background-color: #e2b93b;
+            width: 3px;
+            height: 45px;
+            margin-bottom: 0px;
+          }
+          .border-second {
+            background-color: #27ae60;
+            width: 3px;
+            height: 45px;
+            margin-bottom: 0px;
+          }
+          .border-third {
+            background-color: #2f80ed;
+            width: 3px;
+            height: 45px;
+            margin-bottom: 0px;
+          }
+        }
+
+        .last-container {
+          label {
+            color: #808080;
+            font-size: 0.875rem;
+            display: block;
+            margin-bottom: 1px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

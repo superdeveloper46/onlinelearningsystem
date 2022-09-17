@@ -1,0 +1,31 @@
+.search-field-with-icon {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  padding: 0px 20px;
+  position: relative;
+  background-color: rgba(0, 97, 137, 0.03);
+  border-radius: 0.75rem;
+
+  span.icon {
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  input {
+    width: calc( 100% - 24px );
+    border: none;
+    box-shadow: none;
+    outline: none;
+    margin-left: 0.75rem;
+    background-color: #f3f6f7;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 22px;
+  }
+  input::placeholder {
+    color: #a0a0a0;
+  }
+}

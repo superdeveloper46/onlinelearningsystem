@@ -1,0 +1,75 @@
+/** Form Success Colored Check Input */
+.form-success-check-input {
+  &:checked {
+    background-color: var(--bs-success);
+    border: none !important;
+  }
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.form-control-lg {
+  &::placeholder {
+    font-size: 1rem !important;
+  }
+}
+
+/* Form Controls */
+.cm-form-control {
+  padding: 1.5rem 0;
+  border-top: 2px solid #bfbfbf;
+  display: flex;
+  align-items: center;
+
+  .cm-control-label {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+
+    .cm-control-label__header {
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      letter-spacing: 0.178106px;
+      color: #404040;
+    }
+    .cm-control-label__content {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.178106px;
+      color: #606060;
+    }
+  }
+
+  .cm-control {
+    .cm-input {
+      color: #404040;
+      border: 2px solid #bdbdbd;
+      border-radius: 0.75rem;
+      padding: 16px 1.5rem;
+      min-width: 420px;
+      font-weight: 600;
+
+      &::placeholder {
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 22px;
+        color: #bfbfbf;
+      }
+
+      &:focus-visible {
+        outline: 0;
+        border: 2px solid var(--bs-primary);
+      }
+
+      &:read-only {
+        color: #404040;
+        background: #eff6f9;
+        border: 2px solid #bdbdbd;
+        border-radius: 0.75rem;
+      }
+    }
+  }
+}

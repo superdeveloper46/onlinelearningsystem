@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Binaries\BuildTools22\**" />
+    <Compile Remove="Binaries\BuildTools\**" />
+    <Compile Remove="Binaries\Hadoop\**" />
+    <Compile Remove="Binaries\Include\**" />
+    <Compile Remove="Binaries\Java\**" />
+    <Compile Remove="Binaries\MinGW\**" />
+    <Compile Remove="Binaries\Python310\**" />
+    <Compile Remove="Binaries\R-4.0.3\**" />
+    <Compile Remove="Binaries\Spark\**" />
+    <Compile Remove="Temp\**" />
+    <Content Remove="Binaries\BuildTools22\**" />
+    <Content Remove="Binaries\BuildTools\**" />
+    <Content Remove="Binaries\Hadoop\**" />
+    <Content Remove="Binaries\Include\**" />
+    <Content Remove="Binaries\Java\**" />
+    <Content Remove="Binaries\MinGW\**" />
+    <Content Remove="Binaries\Python310\**" />
+    <Content Remove="Binaries\R-4.0.3\**" />
+    <Content Remove="Binaries\Spark\**" />
+    <Content Remove="Temp\**" />
+    <EmbeddedResource Remove="Binaries\BuildTools22\**" />
+    <EmbeddedResource Remove="Binaries\BuildTools\**" />
+    <EmbeddedResource Remove="Binaries\Hadoop\**" />
+    <EmbeddedResource Remove="Binaries\Include\**" />
+    <EmbeddedResource Remove="Binaries\Java\**" />
+    <EmbeddedResource Remove="Binaries\MinGW\**" />
+    <EmbeddedResource Remove="Binaries\Python310\**" />
+    <EmbeddedResource Remove="Binaries\R-4.0.3\**" />
+    <EmbeddedResource Remove="Binaries\Spark\**" />
+    <EmbeddedResource Remove="Temp\**" />
+    <None Remove="Binaries\BuildTools22\**" />
+    <None Remove="Binaries\BuildTools\**" />
+    <None Remove="Binaries\Hadoop\**" />
+    <None Remove="Binaries\Include\**" />
+    <None Remove="Binaries\Java\**" />
+    <None Remove="Binaries\MinGW\**" />
+    <None Remove="Binaries\Python310\**" />
+    <None Remove="Binaries\R-4.0.3\**" />
+    <None Remove="Binaries\Spark\**" />
+    <None Remove="Temp\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="url.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="url.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Syncfusion.Licensing" Version="20.2.0.45" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CompilersCore\CompilersCore.csproj" />
+    <ProjectReference Include="..\LMS.Common\LMS.Common.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,155 @@
+.assignment-content {
+  .assignment-detail {
+    position: relative;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    min-height: 700px;
+    background: #fbfbfb;
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-color: #d9d9d9;
+    border-radius: 15px 0px 0px 15px;
+
+    .nav-line-tabs .nav-link {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .instruction {
+      p {
+        margin-bottom: 8px;
+      }
+    }
+
+    span.output-header {
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 120%;
+      color: #353535;
+      display: block;
+    }
+
+    pre.output-body {
+      display: block;
+      padding: 16px;
+      background: #f2f2f2;
+      border-radius: 8px;
+      margin-top: 16px;
+      margin-bottom: 2rem;
+      min-height: 6rem;
+
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+
+      &.error {
+        color: #f15656;
+      }
+
+      &.success {
+        color: #27ae60;
+      }
+    }
+  }
+}
+
+.assignment-codeground {
+  position: relative;
+  left: -36px;
+  height: 100%;
+  width: calc(100% + 36px);
+
+  .nav-tabs {
+    align-items: flex-end;
+    .nav-link {
+      border-radius: 13px 13px 0 0;
+      width: 180px;
+      padding: 16px 0 16px 18px;
+      margin-right: 8px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.2;
+      background-color: #f3f3f3;
+      color: #404040;
+
+      &.active {
+        padding: 18px 0 18px 18px;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.2;
+        background: #fefefe;
+      }
+    }
+  }
+
+  .tab-content {
+    background: #fefefe;
+    border: 1px solid #d9d9d9;
+    border-radius: 0px 15px 15px 15px;
+    height: calc(100% - 57px);
+
+    .tab-pane {
+      height: 100%;
+    }
+
+    .code-editor {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      .code-editor__body {
+        flex: 1 1 100%;
+        padding: 30px 0.75rem;
+      }
+    }
+
+    .code-editor__header {
+      padding: 1.5rem;
+      border-bottom: 2.5px solid #dfdfdf;
+    }
+
+    .code-editor__file {
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 120%;
+      color: #606060;
+      display: flex;
+      align-items: center;
+
+      .divider {
+        background-color: #b0b0b0;
+        height: 30px;
+        width: 1px;
+      }
+    }
+
+    .code-editor__setting {
+      button {
+        background: #f3f3f3;
+        border-radius: 0.75rem;
+        width: 44px;
+        height: 44px;
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .code-editor__actions {
+      border-top: 2.51142px solid #dfdfdf;
+      padding: 1.5rem;
+      button {
+        padding: 16px 18px;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 22px;
+      }
+
+      .code-progress {
+        width: 160px;
+      }
+    }
+  }
+}

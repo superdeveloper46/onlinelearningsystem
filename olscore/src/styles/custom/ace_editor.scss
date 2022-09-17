@@ -1,0 +1,13 @@
+.ace_editor {
+  font-size: 18px;
+  font-family: "Consolas", "Courier", "Monaco", "Menlo", "Ubuntu Mono", "source-code-pro", monospace;
+}
+
+.ace-tm .ace_gutter {
+  background: #fff;
+  border-right: 1px solid #cacaca;
+
+  .ace_gutter-cell.ace_gutter-active-line {
+    background-color: #fff;
+  }
+}

@@ -1,0 +1,71 @@
+﻿/*
+New style for Let's Use Data
+Page: Feedback
+*/
+
+
+.feedback-container {
+    margin-top: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+@media (min-width: 768px) { /* Bootstrap's -md- breakpoint */
+    .feedback-container { margin-top: 8.375rem; }
+}
+
+.box.feedback-form, .box.feedback-list {
+     padding: 2rem;
+}
+
+.feedback-box-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.8125rem;
+}
+
+.feedback-boxtitle-marginbottom {
+    margin-bottom: 2rem;
+}
+
+.chk-mine-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.chk-mine-container label {
+    color: #78868C;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.0625rem;
+    cursor: pointer;
+}
+.chk-mine-container input {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    position: relative;
+    top: -1px; /* Just a tiny adjustment */
+    cursor: pointer;
+}
+
+#feedback-list-container, .feedback-list-item {
+    width: 100%;
+}
+
+.feedback-list-item {
+    border: 1px solid #D9D9D9;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+   word-break: break-word;
+}
+.feedback-list-item:last-child {
+    margin-bottom: 0;
+}
+
+.feedback-list-item.no-feedbacks {
+   border: none;
+   color: #bbb;
+   text-align: center;
+}

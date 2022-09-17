@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="Data,learning">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- Title & favicon -->
+    <title>Let's Use Data</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="/Content/images/favicon.png" />
+
+    <!-- Styles -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/fontawesome-free-6.1.1-web/css/all.min.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+    <link href="Content/custome-style.css" rel="stylesheet" />
+    <link href="Content/new-theme-style.css" rel="stylesheet" />
+    <link href="Content/styles/general.css" rel="stylesheet" />
+    <link href="Content/styles/interaction-page.css" rel="stylesheet" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196054626-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-196054626-1');
+    </script>
+</head>
+<body>
+    <!-- Loader spinner -->
+    <div id="disabled-div" class="disabled-div" style="display:none"></div>
+    <div id="loader-spinner" class="loader-img loader-bg" style="display:block">
+        <img src="Content/images/Loder_Trancparent_bg.gif" />
+    </div>
+
+    <!-- Top Navbar -->
+    <div id="header"></div>
+
+    <!-- Content area -->
+    <section class="page-content">
+        <div class="container px-xl-4">
+
+            <!-- Assignment header -->
+            <div class="row">
+                <div>
+                    <div class="box assignment-header">
+                        <div class="d-flex flex-column align-items-center flex-lg-row justify-content-between">
+                            <div class="editable-container abs right-out" editable-id="assignment-title" editable-api="CodingProblem.UpdateTitle[codingProblemId]" editable-type="simpleText">
+                                <div class="editable-btn-edit" title="Edit"><i class="fa-solid fa-pen"></i></div>
+                                <div class="editable-btn-cancel" title="Discard"><i class="fa-solid fa-xmark"></i></div>
+                                <div class="editable-btn-save" title="Save"><i class="fa-solid fa-floppy-disk"></i></div>
+
+                                <div class="assignment-title d-flex flex-row align-items-center text-center text-lg-left admin-editable" id="assignment-title"></div>
+                            </div>
+
+                            <div class="d-flex flex-column align-items-center flex-lg-row">
+                                <div class="assignment-due align-items-center mt-2 align-items-lg-start mt-lg-0 editable-container abs right-in" id="due-container" editable-id="assignment-due-date" editable-api="CodingProblem.UpdateDuedate[codingProblemId,courseInstanceId]" editable-type="dateTime">
+                                    <div><i class="fa-regular fa-clock"></i>&nbsp;Due Date</div>
+
+                                    <div class="editable-btn-edit" title="Edit"><i class="fa-solid fa-pen"></i></div>
+                                    <div class="editable-btn-cancel" title="Discard"><i class="fa-solid fa-xmark"></i></div>
+                                    <div class="editable-btn-save" title="Save"><i class="fa-solid fa-floppy-disk"></i></div>
+
+                                    <div class="text-center text-lg-left" id="assignment-due-date"></div>
+                                </div>
+
+                                <div class="vert-sep d-none d-lg-block" id="due-grade-vertsep"></div>
+
+                                <div class="d-flex flex-row align-items-center mt-2 mt-lg-0">
+                                    <div class="assignment-bestgrade-title">Your Best Grade</div>
+                                    <div class="circular-progress">
+                                        <svg class="circle-container" viewBox="2 -2 28 36" xmlns="http://www.w3.org/2000/svg">
+                                            <circle class="circle-container__background" r="16" cx="16" cy="16" shape-rendering="geometricPrecision"></circle>
+                                            <circle class="circle-container__progress" id="circular-progress" r="16" cx="16" cy="16" style="stroke-dashoffset:100" shape-rendering="geometricPrecision"></circle>
+                                        </svg>
+                                        <div id="circular-progress-value"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Assignment contents -->
+            <div class="row">
+
+                <!-- Left column (Instruction, Summary, and Feedback) -->
+                <div class="col-12 d-flex flex-column col-lg-6">
+                    <div class="box assignment-contents flex-grow-1 d-flex flex-column">
+
+                        <!-- Tab titles -->
+                        <ul class="nav nav-tabs" id="tabInstructAndSumm" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="instructions-tab" data-toggle="tab" data-target="#instructions" type="button" role="tab" aria-controls="instructions" aria-selected="true">Instructions</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="summary-tab" data-toggle="tab" data-target="#summary" type="button" role="tab" aria-controls="summary" aria-selected="false">Summary</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="feedback-tab" data-toggle="tab" data-target="#feedback" type="button" role="tab" aria-controls="feedback" aria-selected="false">Feedback</button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+
+                            <!-- Instruction tab -->
+                            <div class="tab-pane fade show active" id="instructions" role="tabpanel" aria-labelledby="instructions-tab">
+                                <div class="vscrollable editable-container flt" editable-id="txtInstructions" editable-api="CodingProblem.UpdateInstructions[codingProblemId]" editable-type="richText">
+                                    <div class="editable-btn-edit" title="Edit"><i class="fa-solid fa-pen"></i></div>
+                                    <div class="editable-btn-cancel" title="Discard"><i class="fa-solid fa-xmark"></i></div>
+                                    <div class="editable-btn-save" title="Save"><i class="fa-solid fa-floppy-disk"></i></div>
+
+                                    <div id="upper-space" style="width:100%; height:1.75rem;"></div>
+                                    <div id="txtInstructions"></div>
+                                </div>
+                            </div>
+
+                            <!-- Summary tab -->
+                            <div class="tab-pane fade" id="summary" role="tabpanel" aria-labelledby="summary-tab">
+                                <div class="nocontent">
+                                    <i class="fa-solid fa-circle-info"></i>&nbsp;Submit your assignment to show the results summary.
+                                </div>
+
+                                <div id="summary-exists" class="vscrollable">
+                                    <!-- Code & Execution grade progresses -->
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <div class="summary-code">
+                                            <div class="d-flex flex-row justify-content-between">
+                                                <div>Code</div><div id="summary-code"></div>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="summary-execution">
+                                            <div class="d-flex flex-row justify-content-between">
+                                                <div>Execution</div><div id="summary-execution"></div>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Code & Execution output -->
+                                    <div id="summary-output"></div>
+                                </div>
+                            </div>
+
+
+                            <!-- Feedback tab -->
+                            <div class="tab-pane fade" id="feedback" role="tabpanel" aria-labelledby="feedback-tab">
+                                <div class="nocontent">
+                                    <i class="fa-solid fa-circle-info"></i>&nbsp;<span>Submit your assignment to show the feedback.</span>
+                                </div>
+
+                                <div id="feedback-exists" class="vscrollable">
+                                    <!-- Feedback output -->
+                                    <div id="feedback-output"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Old sections -->
+                        <div id="summarydiv" class="d-none">
+                            <p id="comment-area">
+                                <span id="comment-title"></span>&nbsp;<span id="comment-detail"></span>
+                            </p>
+                            <div class="text-center margin-bottom-15">
+                                <span class="text-danger"></span>
+                            </div>
+                            <span class="font-size-15 text-danger margin-top-10 display-block" id="lblError"></span>
+                            <div id="hintContainer">
+                                <!--<p id="hintHeading" style="font-weight:400; font-size:17px"></p>-->
+                                <!--<ul id="theHints" class="list-group list-group-flush"></ul>-->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Right column (Code) -->
+                <div class="col12 col-lg-6">
+                    <div class="box assignment-contents rcol-code">
+                        <div class="coding-area editable-container abs right-in" id="coding-section" editable-id="txtCode1" editable-api="CodingProblem.UpdateScript[codingProblemId,courseInstanceId]" editable-type="code">
+                            <!--<div style="height:100%" id="lines" class="code-lines" readonly></div>-->
+                            <div class="editable-btn-edit" title="Edit"><i class="fa-solid fa-pen"></i></div>
+                            <div class="editable-btn-cancel" title="Discard"><i class="fa-solid fa-xmark"></i></div>
+                            <div class="editable-btn-save" title="Save"><i class="fa-solid fa-floppy-disk"></i></div>
+
+                            <div style="height:100%" id="txtCode1" onkeydown="onKeyDown(event);" onkeyup="compare(event);" class="code-area html"></div>
+                        </div>
+                        <div class="interaction-file-submition-area" id="interaction-file-area" style="height: 25rem; padding-bottom: 68px; display:none">
+                            <div class="file-box">
+                                <p><span style="font-weight:500">Supported file extension:</span> <span id="FileExtension"></span> </p>
+                                <input type="file" id="fileUpload" style="margin-bottom:15px" />
+                                <br />
+                                <input type="submit" id="file-submit" class="btn btn-custom-round" value="Submit" onclick="SubmitFile()" style="width:150px" />
+                                <button class="btn btn-custom-round margin-t-1-half" id="download-excel-file" onclick="DownloadSubmitedFile('Excel')" style="display:none; width:150px">Download</button>
+                                <button class="btn btn-custom-round margin-t-1-half" id="download-image-file" onclick="DownloadSubmitedFile('Image')" style="display:none; width:150px">Download</button>
+                                <span class="font-size-15 text-danger margin-top-10 display-block" id="lblFileUploadError"></span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column align-items-center flex-sm-row justify-content-sm-between" style="margin-top: 2rem;">
+                            <div class="assessment-submissions">
+                                <div class="d-flex flex-row justify-content-between">
+                                    <div>Submissions</div>
+                                    <div class="editable-container abs right-out" editable-id="max-attempts" editable-api="CodingProblem.UpdateMaxAttempts[codingProblemId]" editable-type="simpleText">
+                                        <div class="editable-btn-edit align-items-start" title="Edit"><i class="fa-solid fa-pen"></i></div>
+                                        <div class="editable-btn-cancel align-items-start" title="Discard"><i class="fa-solid fa-xmark"></i></div>
+                                        <div class="editable-btn-save align-items-start" title="Save"><i class="fa-solid fa-floppy-disk"></i></div>
+            
+                                        <span id="submissions"></span><span>&nbsp;/&nbsp;</span><span class="admin-editable" id="max-attempts"></span>
+                                    </div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" id="progress-submissions"></div>
+                                </div>
+                                <div class="flex-row align-items-center justify-content-between submission-date postdue">
+                                    <i class="fa-solid fa-clock-rotate-left"></i>&nbsp;<span id="submission-date"></span>
+                                </div>
+                            </div>
+
+                            <div class="codecmd-container">
+                                <input type="hidden" id="test-code" />
+                                <input type="hidden" id="test-code-filename" />
+                                <button type="button" class="button outline codecmd" id="btnReset" onclick="Reset()">Reset</button>
+                                <button type="submit" class="button solid codecmd ml-2" id="code-submit" onclick="RunCode()">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Scripts -->
+    <script src="Scripts/jquery-3.5.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="PageScripts/Global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.19/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.7.1/ace.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.7.1/ext-language_tools.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone@7.14.7/babel.min.js"></script>
+
+    <script type="text/babel" src="PageScripts/ReactHeader.js"></script>
+    <script type="text/javascript" src="PageScripts/Interaction.js"></script>
+
+    <script type="text/javascript" src="PageScripts/UserInterface.js"></script>
+</body>
+</html>

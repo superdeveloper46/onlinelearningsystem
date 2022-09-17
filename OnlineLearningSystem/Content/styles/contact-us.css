@@ -1,0 +1,26 @@
+﻿/*
+New style for Let's Use Data
+"Contact" and "Contact Us" pages
+*/
+
+
+/* For textboxes with "landing-page" styles */
+.textbox.landingpage {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+}
+
+
+.box.contact {
+   margin-top: 9.3125rem;
+   padding: 2rem;
+}
+
+#contact-title {
+   font-size: 1.5rem;
+   font-weight: 600;
+   line-height: 1.8125rem;
+   margin-bottom: 2rem;
+}
+

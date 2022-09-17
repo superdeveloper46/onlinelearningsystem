@@ -1,0 +1,78 @@
+.bg-contatiner {
+  background: linear-gradient(114.69deg, #23aee9 -25.11%, #126ee2 52.74%);
+  height: 100%;
+  overflow: auto;
+}
+
+.bg-hero {
+  background: url("../assets/images/bg-hero.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.custom-card {
+  background: #f8f8f8;
+  border-radius: 20px;
+  padding: 4rem;
+}
+
+.py-44 {
+  padding-top: 1.375rem;
+  padding-bottom: 1.375rem;
+}
+/* font size */
+
+/* font weight */
+.font-weight-700 {
+  font-weight: 600 !important;
+}
+
+/* custom buttons */
+.btn-cus-primary {
+  background: var(--bs-primary);
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fdfdfd;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s all;
+}
+.btn-cus-primary:hover {
+  background: #1baeeb;
+}
+.btn-cus-secondary {
+  background: transparent;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--bs-primary);
+  border: 2px solid var(--bs-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s all;
+}
+.btn-cus-secondary:hover {
+  background: #ecf6fb;
+  color: var(--bs-primary);
+  text-decoration: none;
+}
+/* custom link style */
+.link-cus-primary {
+  color: var(--bs-primary);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  color: var(--bs-primary);
+  line-height: 1.5;
+}
+.link-cus-secondary {
+  color: #55b6de;
+  text-decoration: none;
+}

@@ -1,0 +1,113 @@
+.profile-page-wrapper {
+  width: 100%;
+
+  padding: 1.5rem 48px 48px 36px;
+
+  .profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      font-size: 1.5rem;
+      line-height: 36px;
+      letter-spacing: 0.178106px;
+      color: #000000;
+    }
+    margin-bottom: 1.5rem;
+  }
+
+  .avatar-editor {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    .avatar-editor-btn {
+      position: relative;
+      z-index: 10;
+      right: 25px;
+      border: 0;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bs-primary);
+
+      svg {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    .fullname {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 33px;
+      letter-spacing: 0.178106px;
+      color: #353535;
+    }
+
+    .email {
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      letter-spacing: 0.178106px;
+      color: #606060;
+    }
+  }
+
+  .student-info-item {
+    margin-left: 100px;
+    .item__header {
+      display: block;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #a0a0a0;
+    }
+
+    .item__content {
+      display: block;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 22px;
+      color: #404040;
+    }
+  }
+
+  .profile-details,
+  .profile-password {
+    padding-top: 0.75rem;
+    padding-bottom: 1.5rem;
+    h2 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.178106px;
+      color: #353535;
+    }
+
+    span.lead-text {
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      letter-spacing: 0.178106px;
+      color: #606060;
+    }
+  }
+}

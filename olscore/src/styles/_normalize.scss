@@ -1,0 +1,65 @@
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #fbfbfb;
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+/*--------------------- Media query 1280 -------------------*/
+
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/*--------------------- Media query 1024 -------------------*/
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/*--------------------- Media query 680 -------------------*/
+
+@media screen and (max-width: 680px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+/*--------------------- Media query 576 -------------------*/
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0003;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+}

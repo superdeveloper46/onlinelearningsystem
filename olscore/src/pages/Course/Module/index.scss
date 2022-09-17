@@ -1,0 +1,58 @@
+.step-header {
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+
+  h2.step-header__title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #353535;
+    margin-bottom: 6px;
+  }
+
+  .step-header__teacher {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #606060;
+    padding-left: 0.2rem;
+  }
+
+  .step-header__right {
+    .grade-name {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin-bottom: 0.125rem;
+      color: #353535;
+    }
+
+    .grade-value {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: #606060;
+    }
+    .btn-action-outline {
+      width: 48px;
+      height: 48px;
+      svg {
+        color: #808080;
+      }
+      &:disabled {
+        color: #bfbfbf;
+        border-color: #bfbfbf;
+        svg {
+          color: #bfbfbf;
+        }
+      }
+    }
+  }
+}
+
+.activity-content {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+}

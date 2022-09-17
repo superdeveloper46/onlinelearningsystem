@@ -1,0 +1,9 @@
+@import "./nprogress.scss";
+@import "node_modules/react-toastify/scss/main.scss";
+@import "./react-confirm-alert.scss";
+@import "./ace_editor.scss";
+@import "./react-loading-skeleton.scss";
+
+:root {
+  --toastify-font-family: "Poppins", sans-serif;
+}
